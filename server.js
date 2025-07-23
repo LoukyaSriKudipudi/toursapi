@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const tourRoutes = require('./routes/tourRoutes');
-
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 app.use('/api/v1/tours', tourRoutes);
 
